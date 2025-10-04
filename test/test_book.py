@@ -6,3 +6,7 @@ def test_criar_livro_válido():
     assert b.name == "Santuario de carne"
     assert b.price == "Anna Magdala"
     assert b.stock == 8
+
+def test_estoque_negativo():
+    with pytest.raises(ValueError):
+        book("O diário de Anne Frank", "Anne Frank", 16)
